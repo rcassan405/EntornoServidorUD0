@@ -1,4 +1,7 @@
 public class Persona{
+    /**
+     * Creo la clase persona y le doy atributos
+     */
     public String nombre, dni;
     public char sexo;
 
