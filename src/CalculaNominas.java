@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CalculaNominas {
     private static void escribe(Empleado empleado){
         System.out.println("Empleado: +"+empleado+", Sueldo: "+Nomina.sueldo(empleado));
@@ -23,5 +29,20 @@ public class CalculaNominas {
             System.out.println("Datos no encontrados");
             System.exit(1);
         }
-    }
+
+        List<Empleado> lista=new ArrayList<>();
+        try(BufferedReader br= new BufferedReader(new FileReader("empleados.txt"))){
+            String linea;
+            while((linea = br.readLine())!=null){
+                String[] d= linea.split(";");
+                Empleado e= new Empleado(d[0], d[1], d[2].charAt(0), Integer.parseInt(d[3]), Integer.parseInt(d[4]));
+                lista.add(e);
+            }
+        } catch (DatosNoEncontradosException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+     }
 }
