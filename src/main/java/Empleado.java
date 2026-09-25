@@ -1,7 +1,7 @@
 public class Empleado extends Persona{
 
     /**
-     * Creo la clase empleado heredando los atributos de la clase Persona, ademas, creo los atributos categoria y anyosTrabajados. Tambien creo un metodo para imprimir los datos
+     * Creo la clase empleado heredando los atributos de la clase main.Persona, ademas, creo los atributos categoria y anyosTrabajados. Tambien creo un metodo para imprimir los datos
      */
     private int categoria;
     public int anyosTrabajados;
@@ -43,7 +43,7 @@ public class Empleado extends Persona{
 
     @Override
     public String toString() {
-        return "Empleado{" +
+        return "main.java.Empleado{" +
                 "categoria=" + categoria +
                 ", anyosTrabajados=" + anyosTrabajados +
                 ", nombre='" + nombre + '\'' +

@@ -1,12 +1,14 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CalculaNominas {
     private static void escribe(Empleado empleado){
-        System.out.println("Empleado: +"+empleado+", Sueldo: "+Nomina.sueldo(empleado));
+        System.out.println("main.java.Empleado: +"+empleado+", Sueldo: "+Nomina.sueldo(empleado));
     }
 
      public static void main(String [] args){
@@ -44,5 +46,9 @@ public class CalculaNominas {
             throw new RuntimeException(e);
         }
 
+        Conexion conn=new Conexion();
+        try (PreparedStatement ps = (PreparedStatement) conn){
+
+        }
      }
 }
