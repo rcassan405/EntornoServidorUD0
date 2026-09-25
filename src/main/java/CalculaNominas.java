@@ -45,10 +45,5 @@ public class CalculaNominas {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        Conexion conn=new Conexion();
-        try (PreparedStatement ps = (PreparedStatement) conn){
-
-        }
      }
 }
