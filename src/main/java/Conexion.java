@@ -9,7 +9,6 @@ public class Conexion {
         String password = "usuario";
 
 
-
         try {
             Connection conexion = DriverManager.getConnection(url, usuario, password);
 
