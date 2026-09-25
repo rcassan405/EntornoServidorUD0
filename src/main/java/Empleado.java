@@ -6,7 +6,7 @@ public class Empleado extends Persona{
     private int categoria;
     public int anyosTrabajados;
 
-    public Empleado(String nombre, String dni, char sexo, int categoria, int anyosTrabajados) throws DatosNoEncontradosException{
+    public Empleado(String nombre, String dni, String sexo, int categoria, int anyosTrabajados) throws DatosNoEncontradosException{
         super(nombre, dni, sexo);
         if(categoria>0&&categoria<10){
             this.categoria=categoria;
@@ -20,7 +20,7 @@ public class Empleado extends Persona{
         }
     }
 
-    public Empleado(String nombre, String dni, char sexo) throws DatosNoEncontradosException{
+    public Empleado(String nombre, String dni, String sexo) throws DatosNoEncontradosException{
         super(nombre, dni, sexo);
         categoria=1;
         anyosTrabajados=0;

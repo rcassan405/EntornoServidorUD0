@@ -3,10 +3,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexion {
+    public Conexion() {
+    }
+
     public static void main(String[] args) {
         String url = "jdbc:mariadb://localhost:3306/RepasoServidor1";
         String usuario = "root";
-        String password = "usuario";
+        String password = "123456";
+
 
 
         try {
