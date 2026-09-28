@@ -8,7 +8,7 @@ public class Empleado extends Persona{
 
     public Empleado(String nombre, String dni, String sexo, int categoria, int anyosTrabajados) throws DatosNoEncontradosException{
         super(nombre, dni, sexo);
-        if(categoria>0&&categoria<10){
+        if(categoria>0&&categoria<=10){
             this.categoria=categoria;
         }else{
             categoria=1;
